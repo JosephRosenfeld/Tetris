@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <script defer src="scripts.js"></script>
+  <title>Tetris</title>
+</head>
+<body>
+  <div class="game">
+    <div class="grid-container">
+      <div class="row">
+        <div class="cell" data-loc="x0y19"></div>
+        <div class="cell" data-loc="x1y19"></div>
+        <div class="cell" data-loc="x2y19"></div>
+        <div class="cell" data-loc="x3y19"></div>
+        <div class="cell" data-loc="x4y19"></div>
+        <div class="cell" data-loc="x5y19"></div>
+        <div class="cell" data-loc="x6y19"></div>
+        <div class="cell" data-loc="x7y19"></div>
+        <div class="cell" data-loc="x8y19"></div>
+        <div class="cell" data-loc="x9y19"></div>
+      </div>
+      <div class="row row-19">
+        <div class="cell" data-loc="x0y18"></div>
+        <div class="cell" data-loc="x1y18"></div>
+        <div class="cell" data-loc="x2y18"></div>
+        <div class="cell" data-loc="x3y18"></div>
+        <div class="cell" data-loc="x4y18"></div>
+        <div class="cell" data-loc="x5y18"></div>
+        <div class="cell" data-loc="x6y18"></div>
+        <div class="cell" data-loc="x7y18"></div>
+        <div class="cell" data-loc="x8y18"></div>
+        <div class="cell" data-loc="x9y18"></div>
+      </div>
+      <div class="row row-18">
+        <div class="cell" data-loc="x0y17"></div>
+        <div class="cell" data-loc="x1y17"></div>
+        <div class="cell" data-loc="x2y17"></div>
+        <div class="cell" data-loc="x3y17"></div>
+        <div class="cell" data-loc="x4y17"></div>
+        <div class="cell" data-loc="x5y17"></div>
+        <div class="cell" data-loc="x6y17"></div>
+        <div class="cell" data-loc="x7y17"></div>
+        <div class="cell" data-loc="x8y17"></div>
+        <div class="cell" data-loc="x9y17"></div>
+      </div>
+      <div class="row row-17">
+        <div class="cell" data-loc="x0y16"></div>
+        <div class="cell" data-loc="x1y16"></div>
+        <div class="cell" data-loc="x2y16"></div>
+        <div class="cell" data-loc="x3y16"></div>
+        <div class="cell" data-loc="x4y16"></div>
+        <div class="cell" data-loc="x5y16"></div>
+        <div class="cell" data-loc="x6y16"></div>
+        <div class="cell" data-loc="x7y16"></div>
+        <div class="cell" data-loc="x8y16"></div>
+        <div class="cell" data-loc="x9y16"></div>
+      </div>
+      <div class="row row-16">
+        <div class="cell" data-loc="x0y15"></div>
+        <div class="cell" data-loc="x1y15"></div>
+        <div class="cell" data-loc="x2y15"></div>
+        <div class="cell" data-loc="x3y15"></div>
+        <div class="cell" data-loc="x4y15"></div>
+        <div class="cell" data-loc="x5y15"></div>
+        <div class="cell" data-loc="x6y15"></div>
+        <div class="cell" data-loc="x7y15"></div>
+        <div class="cell" data-loc="x8y15"></div>
+        <div class="cell" data-loc="x9y15"></div>
+      </div>
+      <div class="row row-15">
+        <div class="cell" data-loc="x0y14"></div>
+        <div class="cell" data-loc="x1y14"></div>
+        <div class="cell" data-loc="x2y14"></div>
+        <div class="cell" data-loc="x3y14"></div>
+        <div class="cell" data-loc="x4y14"></div>
+        <div class="cell" data-loc="x5y14"></div>
+        <div class="cell" data-loc="x6y14"></div>
+        <div class="cell" data-loc="x7y14"></div>
+        <div class="cell" data-loc="x8y14"></div>
+        <div class="cell" data-loc="x9y14"></div>
+      </div>
+      <div class="row row-14">
+        <div class="cell" data-loc="x0y13"></div>
+        <div class="cell" data-loc="x1y13"></div>
+        <div class="cell" data-loc="x2y13"></div>
+        <div class="cell" data-loc="x3y13"></div>
+        <div class="cell" data-loc="x4y13"></div>
+        <div class="cell" data-loc="x5y13"></div>
+        <div class="cell" data-loc="x6y13"></div>
+        <div class="cell" data-loc="x7y13"></div>
+        <div class="cell" data-loc="x8y13"></div>
+        <div class="cell" data-loc="x9y13"></div>
+      </div>
+      <div class="row row-13">
+        <div class="cell" data-loc="x0y12"></div>
+        <div class="cell" data-loc="x1y12"></div>
+        <div class="cell" data-loc="x2y12"></div>
+        <div class="cell" data-loc="x3y12"></div>
+        <div class="cell" data-loc="x4y12"></div>
+        <div class="cell" data-loc="x5y12"></div>
+        <div class="cell" data-loc="x6y12"></div>
+        <div class="cell" data-loc="x7y12"></div>
+        <div class="cell" data-loc="x8y12"></div>
+        <div class="cell" data-loc="x9y12"></div>
+      </div>
+      <div class="row row-12">
+        <div class="cell" data-loc="x0y11"></div>
+        <div class="cell" data-loc="x1y11"></div>
+        <div class="cell" data-loc="x2y11"></div>
+        <div class="cell" data-loc="x3y11"></div>
+        <div class="cell" data-loc="x4y11"></div>
+        <div class="cell" data-loc="x5y11"></div>
+        <div class="cell" data-loc="x6y11"></div>
+        <div class="cell" data-loc="x7y11"></div>
+        <div class="cell" data-loc="x8y11"></div>
+        <div class="cell" data-loc="x9y11"></div>
+      </div>
+      <div class="row row-11">
+        <div class="cell" data-loc="x0y10"></div>
+        <div class="cell" data-loc="x1y10"></div>
+        <div class="cell" data-loc="x2y10"></div>
+        <div class="cell" data-loc="x3y10"></div>
+        <div class="cell" data-loc="x4y10"></div>
+        <div class="cell" data-loc="x5y10"></div>
+        <div class="cell" data-loc="x6y10"></div>
+        <div class="cell" data-loc="x7y10"></div>
+        <div class="cell" data-loc="x8y10"></div>
+        <div class="cell" data-loc="x9y10"></div>
+      </div>
+      <div class="row row-10">
+        <div class="cell" data-loc="x0y9"></div>
+        <div class="cell" data-loc="x1y9"></div>
+        <div class="cell" data-loc="x2y9"></div>
+        <div class="cell" data-loc="x3y9"></div>
+        <div class="cell" data-loc="x4y9"></div>
+        <div class="cell" data-loc="x5y9"></div>
+        <div class="cell" data-loc="x6y9"></div>
+        <div class="cell" data-loc="x7y9"></div>
+        <div class="cell" data-loc="x8y9"></div>
+        <div class="cell" data-loc="x9y9"></div>
+      </div>
+      <div class="row row-9">
+        <div class="cell" data-loc="x0y8"></div>
+        <div class="cell" data-loc="x1y8"></div>
+        <div class="cell" data-loc="x2y8"></div>
+        <div class="cell" data-loc="x3y8"></div>
+        <div class="cell" data-loc="x4y8"></div>
+        <div class="cell" data-loc="x5y8"></div>
+        <div class="cell" data-loc="x6y8"></div>
+        <div class="cell" data-loc="x7y8"></div>
+        <div class="cell" data-loc="x8y8"></div>
+        <div class="cell" data-loc="x9y8"></div>
+      </div>
+      <div class="row row-8">
+        <div class="cell" data-loc="x0y7"></div>
+        <div class="cell" data-loc="x1y7"></div>
+        <div class="cell" data-loc="x2y7"></div>
+        <div class="cell" data-loc="x3y7"></div>
+        <div class="cell" data-loc="x4y7"></div>
+        <div class="cell" data-loc="x5y7"></div>
+        <div class="cell" data-loc="x6y7"></div>
+        <div class="cell" data-loc="x7y7"></div>
+        <div class="cell" data-loc="x8y7"></div>
+        <div class="cell" data-loc="x9y7"></div>
+      </div>
+      <div class="row row-7">
+        <div class="cell" data-loc="x0y6"></div>
+        <div class="cell" data-loc="x1y6"></div>
+        <div class="cell" data-loc="x2y6"></div>
+        <div class="cell" data-loc="x3y6"></div>
+        <div class="cell" data-loc="x4y6"></div>
+        <div class="cell" data-loc="x5y6"></div>
+        <div class="cell" data-loc="x6y6"></div>
+        <div class="cell" data-loc="x7y6"></div>
+        <div class="cell" data-loc="x8y6"></div>
+        <div class="cell" data-loc="x9y6"></div>
+      </div>
+      <div class="row row-6">
+        <div class="cell" data-loc="x0y5"></div>
+        <div class="cell" data-loc="x1y5"></div>
+        <div class="cell" data-loc="x2y5"></div>
+        <div class="cell" data-loc="x3y5"></div>
+        <div class="cell" data-loc="x4y5"></div>
+        <div class="cell" data-loc="x5y5"></div>
+        <div class="cell" data-loc="x6y5"></div>
+        <div class="cell" data-loc="x7y5"></div>
+        <div class="cell" data-loc="x8y5"></div>
+        <div class="cell" data-loc="x9y5"></div>
+      </div>
+      <div class="row row-5">
+        <div class="cell" data-loc="x0y4"></div>
+        <div class="cell" data-loc="x1y4"></div>
+        <div class="cell" data-loc="x2y4"></div>
+        <div class="cell" data-loc="x3y4"></div>
+        <div class="cell" data-loc="x4y4"></div>
+        <div class="cell" data-loc="x5y4"></div>
+        <div class="cell" data-loc="x6y4"></div>
+        <div class="cell" data-loc="x7y4"></div>
+        <div class="cell" data-loc="x8y4"></div>
+        <div class="cell" data-loc="x9y4"></div>
+      </div>
+      <div class="row row-4">
+        <div class="cell" data-loc="x0y3"></div>
+        <div class="cell" data-loc="x1y3"></div>
+        <div class="cell" data-loc="x2y3"></div>
+        <div class="cell" data-loc="x3y3"></div>
+        <div class="cell" data-loc="x4y3"></div>
+        <div class="cell" data-loc="x5y3"></div>
+        <div class="cell" data-loc="x6y3"></div>
+        <div class="cell" data-loc="x7y3"></div>
+        <div class="cell" data-loc="x8y3"></div>
+        <div class="cell" data-loc="x9y3"></div>
+      </div>
+      <div class="row row-3">
+        <div class="cell" data-loc="x0y2"></div>
+        <div class="cell" data-loc="x1y2"></div>
+        <div class="cell" data-loc="x2y2"></div>
+        <div class="cell" data-loc="x3y2"></div>
+        <div class="cell" data-loc="x4y2"></div>
+        <div class="cell" data-loc="x5y2"></div>
+        <div class="cell" data-loc="x6y2"></div>
+        <div class="cell" data-loc="x7y2"></div>
+        <div class="cell" data-loc="x8y2"></div>
+        <div class="cell" data-loc="x9y2"></div>
+      </div>
+      <div class="row row-2">
+        <div class="cell" data-loc="x0y1"></div>
+        <div class="cell" data-loc="x1y1"></div>
+        <div class="cell" data-loc="x2y1"></div>
+        <div class="cell" data-loc="x3y1"></div>
+        <div class="cell" data-loc="x4y1"></div>
+        <div class="cell" data-loc="x5y1"></div>
+        <div class="cell" data-loc="x6y1"></div>
+        <div class="cell" data-loc="x7y1"></div>
+        <div class="cell" data-loc="x8y1"></div>
+        <div class="cell" data-loc="x9y1"></div>
+      </div>
+      <div class="row row-1">
+        <div class="cell" data-loc="x0y0"></div>
+        <div class="cell" data-loc="x1y0"></div>
+        <div class="cell" data-loc="x2y0"></div>
+        <div class="cell" data-loc="x3y0"></div>
+        <div class="cell" data-loc="x4y0"></div>
+        <div class="cell" data-loc="x5y0"></div>
+        <div class="cell" data-loc="x6y0"></div>
+        <div class="cell" data-loc="x7y0"></div>
+        <div class="cell" data-loc="x8y0"></div>
+        <div class="cell" data-loc="x9y0"></div>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="next-text">
+        NEXT
+      </div>
+      <div class="next-box">
+        <div class="row row-4">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row row-3">
+          <div class="cell"></div>
+          <div class="cell" data-loc="x0y1"></div>
+          <div class="cell" data-loc="x1y1"></div>
+          <div class="cell" data-loc="x2y1"></div>
+          <div class="cell" data-loc="x3y1"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row row-2">
+          <div class="cell"></div>
+          <div class="cell" data-loc="x0y0"></div>
+          <div class="cell" data-loc="x1y0"></div>
+          <div class="cell" data-loc="x2y0"></div>
+          <div class="cell" data-loc="x3y0"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row row-1">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+      <div class="score-text">
+        SCORE:
+      </div>
+      <div id="score">
+        0
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -6,8 +6,17 @@ var setBlocks;
 var rotatedShape;
 var cells = Array(...document.querySelectorAll(".grid-container .cell"));
 var scoreCell = document.getElementById("score");
+var gameLevel = document.querySelector(".game-level");
+var leaderboardBox = document.querySelector(".leaderboard-box");
+var leaderboardText = document.querySelector(".leaderboard-box p")
+var startBox = document.querySelector(".start-box");
+var lbScore = document.querySelector(".lb-score");
 var score = 0;
 var play = true;
+
+//Add event listeners to DOM
+document.querySelector(".start-button").addEventListener("click", firstPlay)
+document.querySelector(".replay-button").addEventListener("click", replay);
 
 //Define tetris blocks
 //Block I
@@ -62,6 +71,40 @@ const zBlock = {
 
 blocks = [iBlock, jBlock, lBlock, oBlock, sBlock, tBlock, zBlock]
 
+function firstPlay() {
+  console.log("first play");
+  startBox.style.display = "none";
+  gameLevel.style.opacity = "1";
+  clock();
+}
+
+function replay() {
+  console.log("replay");
+
+  //Reseting all vars to initial values
+  newBlockNeeded = true;
+  nextBlock;
+  curBlock;
+  setBlocks;
+  rotatedShape;
+  cells = Array(...document.querySelectorAll(".grid-container .cell"));
+  scoreCell = document.getElementById("score");
+  scoreCell.innerHTML = "0"; //Added line to remove old score
+  score = 0;
+  play = true;
+
+  //Clearing out cells in game grid
+  for(i = 0; i < cells.length; i++) {
+    cells[i].className = "cell";
+  }
+
+  //Hiding leaderboard and changing opacity
+  leaderboardBox.style.display = "none";
+  gameLevel.style.opacity = "1"
+
+  clock();
+}
+
 //recursively called function to repeatedly trigger movement
 function clock() {
   setTimeout(function main() {
@@ -85,7 +128,6 @@ function clock() {
     }
   }, 500)
 }
-clock(); //Original Clock call
 
 //Shift coordinates of curBlock to the top of the grid
 function setNewBlock() {
@@ -210,6 +252,8 @@ document.onkeydown = function(e) {
 };
 
 function rotate() {
+  if (newBlockNeeded || !play) 
+    return;
   let c = curBlock.color;
   let shape = curBlock.shape;
   //Squares can't rotate
@@ -301,7 +345,11 @@ function clearLevels() {
 }
 
 function endGame() {
-  alert("Score: " + score);
+  console.log("at end game");
+  gameLevel.style.opacity = ".4";
+  leaderboardBox.style.display = "flex";
+  leaderboardBox.style.flexDirection = "column";
+  lbScore.innerHTML = score;
   play = false;
   newBlockNeeded = false;
 }

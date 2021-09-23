@@ -81,9 +81,7 @@ h1 {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-}
-
-.game > div {
+  gap: 40px;
   margin: 20px;
 }
 
@@ -217,6 +215,11 @@ h1 {
 }
 
 @media (max-width: 460px) {
+
+  .game {
+    gap: 20px;
+  }
+  
   .game > div {
     margin: 5px 5px 20px 5px !important;
   }

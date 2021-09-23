@@ -166,6 +166,56 @@ h1 {
   margin-bottom: 40px;
 }
 
+.rotate-text {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.arrow-key {
+  padding: 10px;
+  color:#fff;
+  background-color: rgb(60, 60, 60);
+  border-right: 4px solid rgb(10, 10, 10);
+  border-bottom: 4px solid rgb(10, 10, 10);
+  border-left: 4px solid rgb(45, 45, 45);
+  border-top: 4px solid rgb(50, 50, 50);  
+  transition: all .05s linear;
+}
+
+.arrow-key:active:hover, .pressed {
+  transform: translate(0, -1px);
+  text-shadow: 0 0 10px white;
+}
+
+.arrow-up {
+  grid-area: up;
+}
+
+.arrow-left {
+  grid-area: left;
+  justify-self: end;
+}
+
+.arrow-down {
+  grid-area: down;
+}
+
+.arrow-right {
+  grid-area: right;
+  justify-self: left;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". up ." "left down right";
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
 @media (max-width: 460px) {
   .game > div {
     margin: 5px 5px 20px 5px !important;
@@ -179,6 +229,22 @@ h1 {
   .next-text, .score-text{
     margin: 10px;
   }
+
+  .next-box {
+    margin-bottom: 20px;
+  }
+
+  .rotate-text {
+    margin-top: 20px;
+  }
+
+  .arrow-key {
+    padding: 4px;
+  }
+
+  .keypad-grid {
+    grid-gap: 5px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -191,6 +257,3 @@ h1 {
     font-size: 1.5em;
   }
 }
-
-
-

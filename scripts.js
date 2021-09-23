@@ -11,12 +11,21 @@ var leaderboardBox = document.querySelector(".leaderboard-box");
 var leaderboardText = document.querySelector(".leaderboard-box p")
 var startBox = document.querySelector(".start-box");
 var lbScore = document.querySelector(".lb-score");
+var uKey = document.querySelector(".arrow-up");
+var lKey = document.querySelector(".arrow-left");
+var dKey = document.querySelector(".arrow-down");
+var rKey = document.querySelector(".arrow-right");
 var score = 0;
 var play = true;
 
 //Add event listeners to DOM
 document.querySelector(".start-button").addEventListener("click", firstPlay)
 document.querySelector(".replay-button").addEventListener("click", replay);
+//Arrow key event listeners
+document.querySelector(".arrow-up").addEventListener("click", rotate);
+document.querySelector(".arrow-left").addEventListener("click", () => {return move(-1,0)});
+document.querySelector(".arrow-right").addEventListener("click", () => {return move(1,0)});
+document.querySelector(".arrow-down").addEventListener("click", () => {return move(0,-1)});
 
 //Define tetris blocks
 //Block I
@@ -234,18 +243,29 @@ function clearNextBox() {
   document.querySelector('.next-box div[data-loc="x3y1"]').className = "cell";
 }
 
+function highlightKey(el) {
+  el.classList.add("pressed");
+  setTimeout(function() {
+    el.classList.remove("pressed");
+  }, 200);
+}
+
 document.onkeydown = function(e) { 
   switch(e.key) {
     case "ArrowUp":
+      highlightKey(uKey);
       rotate();
       break;
     case "ArrowLeft":
+      highlightKey(lKey);
       move(-1, 0);
       break;
     case "ArrowRight":
+      highlightKey(rKey);
       move(1, 0);
       break;
     case "ArrowDown":
+      highlightKey(dKey);
       move(0, -1);
       break;
   }
